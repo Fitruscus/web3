@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaseRazor", "ClaseRazor.csproj", "{ABD9AAAF-E065-4A7E-B48C-F50D3AB85094}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABD9AAAF-E065-4A7E-B48C-F50D3AB85094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD9AAAF-E065-4A7E-B48C-F50D3AB85094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD9AAAF-E065-4A7E-B48C-F50D3AB85094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD9AAAF-E065-4A7E-B48C-F50D3AB85094}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAC4CB2C-112F-46D4-BFFD-8F467F9ACBB9}
+	EndGlobalSection
+EndGlobal
