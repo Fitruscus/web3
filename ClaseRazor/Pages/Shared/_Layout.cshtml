@@ -3,70 +3,34 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ClaseRazor</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ClaseRazor.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom shadow-sm mb-3">
-            <div class="container">
-                <a class="navbar-brand fw-bold" asp-area="" asp-page="/Index">ClaseRazor</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="btn btn-light mx-1" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-light mx-1" asp-area="" asp-page="/Privacy">Privacidad</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-light mx-1" asp-area="" asp-page="/Acerca de">Acerca de</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn btn-light mx-1" asp-area="" asp-page="/Contacto">Contacto</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <a class="btn btn-outline-primary mx-1" href="#">Login</a>
-                        <a class="btn btn-primary mx-1" href="#">Register</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card shadow-sm border-0">
-                    <div class="card-body">
-                        <h2 class="card-title text-center mb-4">@ViewData["Title"]</h2>
-                        <div class="content-area">
-                            @RenderBody()
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Barra superior -->
+    <div class="topbar">
+        <span class="fw-bold">MP MiPanel</span>
+        <button id="toggleSidebar">Toggle navigation</button>
     </div>
 
-    <footer class="border-top footer text-muted py-3">
-        <div class="container text-center">
-            &copy; 2025 - ClaseRazor  
-            <a class="btn btn-link p-0" asp-area="" asp-page="/Privacy">Privacy</a>
+    <!-- Sidebar y contenido -->
+    <div class="main-wrapper" id="mainWrapper">
+        <div class="sidebar" id="sidebar">
+            <h2>Menú</h2>
+            <a asp-page="/Index">Inicio</a>
+            <a asp-page="/Salario">Salario</a>
+            <a asp-page="/Privacidad">Privacidad</a>
         </div>
-    </footer>
+
+        <div class="content-area">
+            @RenderBody()  <!-- IMPORTANTE: aquí se insertará el contenido de cada página -->
+        </div>
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

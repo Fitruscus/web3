@@ -1,10 +1,50 @@
 ﻿@page
-@model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Tareas Asignadas - Mi Panel";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>Tareas Asignadas</h2>
+
+<table class="table table-bordered task-table">
+    <thead>
+        <tr>
+            <th>Nombre Tarea</th>
+            <th>Fecha Vencimiento</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="taskTableBody">
+        <!-- Tareas preasignadas -->
+        <tr data-status="pending">
+            <td>Comprar víveres</td>
+            <td>2025-08-20</td>
+            <td>Pendiente</td>
+            <td>
+                <button class="btn btn-sm btn-success complete-btn">✓</button>
+                <button class="btn btn-sm btn-primary edit-btn">✎</button>
+                <button class="btn btn-sm btn-danger delete-btn">🗑</button>
+            </td>
+        </tr>
+        <tr data-status="completed">
+            <td>Estudiar JavaScript</td>
+            <td>2025-08-18</td>
+            <td>Completada</td>
+            <td>
+                <button class="btn btn-sm btn-success complete-btn">✓</button>
+                <button class="btn btn-sm btn-primary edit-btn">✎</button>
+                <button class="btn btn-sm btn-danger delete-btn">🗑</button>
+            </td>
+        </tr>
+        <tr data-status="pending">
+            <td>Llamar al banco</td>
+            <td>2025-08-22</td>
+            <td>Pendiente</td>
+            <td>
+                <button class="btn btn-sm btn-success complete-btn">✓</button>
+                <button class="btn btn-sm btn-primary edit-btn">✎</button>
+                <button class="btn btn-sm btn-danger delete-btn">🗑</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
