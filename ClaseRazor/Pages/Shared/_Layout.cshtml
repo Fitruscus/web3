@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]</title>
+    <title>@ViewData["Title"] - MiPanel</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ClaseRazor.styles.css" asp-append-version="true" />
 </head>
 <body>
     <!-- Barra superior -->
@@ -14,8 +15,9 @@
         <button id="toggleSidebar">Toggle navigation</button>
     </div>
 
-    <!-- Sidebar y contenido -->
+    <!-- Contenedor principal -->
     <div class="main-wrapper" id="mainWrapper">
+        <!-- Sidebar -->
         <div class="sidebar" id="sidebar">
             <h2>Menú</h2>
             <a asp-page="/Index">Inicio</a>
@@ -23,8 +25,9 @@
             <a asp-page="/Privacidad">Privacidad</a>
         </div>
 
+        <!-- Contenido -->
         <div class="content-area">
-            @RenderBody()  <!-- IMPORTANTE: aquí se insertará el contenido de cada página -->
+            @RenderBody()
         </div>
     </div>
 
